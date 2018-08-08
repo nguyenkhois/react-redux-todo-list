@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { TodoList, DoneList } from './todoslists.component';
+import { TodoList, DoneList } from './lists.component';
 import { actions } from './actions';
 
 /**
