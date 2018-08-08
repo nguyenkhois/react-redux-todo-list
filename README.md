@@ -1,1 +1,1 @@
-# react-redux-todo-list
+# React-Redux - To-Do list
