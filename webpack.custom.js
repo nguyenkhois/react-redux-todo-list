@@ -1,3 +1,3 @@
 module.exports = {
-    distFolder: './dist' // Distribution folder
+    distDir: './dist' // Distribution directory
 }

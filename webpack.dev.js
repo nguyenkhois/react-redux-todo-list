@@ -8,7 +8,7 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: path.join(__dirname, customConfigs.distFolder), // the root for the server
+        contentBase: path.join(__dirname, customConfigs.distDir), // the root for the server
         watchContentBase: true, // so we reload if other stuff like CSS changes
         port: 9000, // it'll now be at http://localhost:9000
         watchOptions: {
