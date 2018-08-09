@@ -34,9 +34,12 @@ import { App } from './app';
  * Tip! View again step 0 to know about @state structure
  */
 const preloadedState = []; // Initial main state value (Redux state)
-const store = createStore(userReducer, 
+const store = createStore(userReducer, preloadedState);
+
+// Using for testing with Chrome extension
+/* const store = createStore(userReducer, 
                             preloadedState,
-                            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+                            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); */
 
 /**
  * STEP 6 - Rendering
