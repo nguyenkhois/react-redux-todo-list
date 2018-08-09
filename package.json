@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The React-Redux ToDo list example",
   "private": true,
-  "main": "./src/index.jsx",
+  "main": "/src/index.jsx",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
