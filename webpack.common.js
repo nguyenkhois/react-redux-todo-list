@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const customConfigs = require('./webpack.custom'); // Using your own configs
 
 module.exports = {
-    entry: './src/index.js',// which file to begin with, 
+    entry: customConfigs.entryPoint,// which file to begin with 
     output: {
         path: path.resolve(__dirname, customConfigs.distDir), // what folder to put bundle in
         filename: '[name].[hash].js' // what name to use for bundle
@@ -25,7 +25,7 @@ module.exports = {
     },
     plugins: [
         new WebpackNotifierPlugin({ alwaysNotify: true }),
-        new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new HtmlWebpackPlugin({ template: customConfigs.htmlTemplate }),
         new CleanWebpackPlugin(customConfigs.distDir)
     ]
 };

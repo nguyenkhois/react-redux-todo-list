@@ -10,7 +10,7 @@ module.exports = merge(common, {
     devServer: {
         contentBase: path.join(__dirname, customConfigs.distDir), // the root for the server
         watchContentBase: true, // so we reload if other stuff like CSS changes
-        port: 9000, // it'll now be at http://localhost:9000
+        port: 9000,
         watchOptions: {
             ignored: /node_modules/
         }
