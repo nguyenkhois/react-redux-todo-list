@@ -9,7 +9,7 @@ You should view step by step if you want to know about React-Redux:
     * Step 4a: Mapping Redux dispatchs to React props by using mapDispatchToProps()
     * Step 4b: Mapping Redux state to React props by using mapStateToProps()
     * Step 4c: Creating React class component. View more on `lists.component.js`
-* Step 5 (`todos.components.js`): Creating connection between Redux state and dispatchs with React class component by using connect()
+* Step 5 (`todos.components.js`): Creating connection between Redux state and actions (dispatchs) with React class component by using connect()
 * Step 6 (`index.js`): Rendering by Provider
 
 ## Other repositories
