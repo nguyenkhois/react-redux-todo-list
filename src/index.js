@@ -28,7 +28,7 @@ import { App } from './app';
 
 
 /**
- * STEP 2 - Creating store
+ * STEP 5 - Creating store
  * View more about createStore() here:
  * https://redux.js.org/api/createstore
  * Tip! View again step 0 to know about @state structure

@@ -1,5 +1,5 @@
 /**
- * STEP 3 - Creating actions (Redux dispatchs)
+ * STEP 2 - Creating actions for Redux dispatchs
  * View again step 0 to know about @action structure
  * An @action must has @type
  * Tip! View again step 0 to know about @action structure

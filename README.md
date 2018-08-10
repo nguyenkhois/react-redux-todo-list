@@ -1,16 +1,24 @@
 # React-Redux - To-Do list
 ## How you view
 You should view step by step if you want to know about React-Redux:
- * Step 0 (`index.js`): Data structures
- * Step 1 (`reducer.js`): Creating reducer
- * Step 2 (`index.js`): Creating store after you have created reducer
- * Step 3 (`actions.js`): Creating actions (Redux dispatchs)
- * Step 4 (`todos.components.js`)
-    * Step 4a: Mapping Redux dispatchs to React props by using mapDispatchToProps()
-    * Step 4b: Mapping Redux state to React props by using mapStateToProps()
-    * Step 4c: Creating React class component. View more on `lists.component.js`
-* Step 5 (`todos.components.js`): Creating connection between Redux state and actions (dispatchs) with React class component by using connect()
-* Step 6 (`index.js`): Rendering by Provider
+* Step 0 (`index.js`): Data structures
+* Step 1 (`reducer.js`): Creating reducer
+* Step 2 (`actions.js`): Creating actions
+* Step 3 (`todos.components.js`)
+   * Step 3a: Creating React props from actions by using mapDispatchToProps()
+   * Step 3b: Creating React props from Redux state by using mapStateToProps(). It used like local state.
+   * Step 3c: Creating React class component with its props that were created on above steps. View more on `lists.component.js`
+* Step 4 (`todos.components.js`): Creating a container component by using connect() function
+* Step 5 (`index.js`): Creating a store
+* Step 6 (`index.js`): Rendering whole the app by Provider
+
+You can view more about Redux:
+* [Core concepts](https://redux.js.org/introduction/coreconcepts)
+* [Three principles](https://redux.js.org/introduction/threeprinciples)
+* [Redux data flow](https://redux.js.org/basics/dataflow)
+* [API reference](https://redux.js.org/api)
+   * [Create store](https://redux.js.org/api/createstore)
+   * [Store](https://redux.js.org/api/store)
 
 ## Screenshot
 View on [Codesandbox](https://codesandbox.io/s/7m2nzolvv1)

@@ -6,8 +6,12 @@ import { TodoList, DoneList } from './lists.component';
 import { actions } from './actions';
 
 /**
- * STEP 4A - Mapping all actions (Redux dispatchs) to React props
- * <React props>: <Redux action>
+ * STEP 3A - Creating React component props from actions by using a mapping function
+ * <reactProps>: you name it whatever name you want
+ * <reduxAction>: you have created them on step 2
+ * const mapDispatchToProps = {
+ *      <reactProps>: <reduxAction>
+ * };
  */
 const mapDispatchToProps = {
     addTask: actions.addTask,
@@ -17,10 +21,15 @@ const mapDispatchToProps = {
 };
 
 /**
- * STEP 4B - Mapping Redux state to React props
- * Redux state is @state that is default name
- * React prop is @todos that you name it
- * <React props>: <Redux state>
+ * STEP 3B - Creating React component props that used like component state
+ *           from Redux state by using a mapping function
+ * @state is Redux state (default)
+ * @todos is React component props that you name it by yourself
+ * const mapStateToProps = (state) => {
+ *      return {
+ *          <reactProps>: <reduxState>
+ *      };
+ * };
  */
 const mapStateToProps = (state) => {
     return {
@@ -29,7 +38,7 @@ const mapStateToProps = (state) => {
 };
 
 /**
- * STEP 4C - Creating React class component
+ * STEP 3C - Creating React class component with its props that were created on above steps
  */
 class TodoApp extends Component {
     handleEnterKey = (e) => {
@@ -40,7 +49,9 @@ class TodoApp extends Component {
                 description: userInput, 
                 isDone: false
             };
-            this.props.addTask(newItem); // Using actions (Redux dispatch) that have created on step 3 and mapped on step 4A
+
+            // Dispatch Redux actions that have created on step 2 and mapped on step 3A
+            this.props.addTask(newItem);
 
             e.target.value = ''; // Clear text input
         }
@@ -95,7 +106,6 @@ TodoApp.propTypes = {
 }
 
 /**
- * STEP 5 - Creating connection to React class component
- * Creating connection between Redux state and dispatchs with React class component
+ * STEP 4 - Creating a container component by using connect() function from Redux 
  */
 export const TodoX = connect(mapStateToProps, mapDispatchToProps)(TodoApp);
