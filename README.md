@@ -12,6 +12,24 @@ You should view step by step if you want to know about React-Redux:
 * Step 5 (`todos.components.js`): Creating connection between Redux state and actions (dispatchs) with React class component by using connect()
 * Step 6 (`index.js`): Rendering by Provider
 
+## Screenshot
+View on [Codesandbox](https://codesandbox.io/s/7m2nzolvv1)
+
+![Screenshot](assets/screenshot.png)
+
+## Compatibility
+Build environment is compatible with:
+* Windows
+* MacOS
+* Debian
+
+## Installation
+* Run `npm install` to install all needed packages
+
+## Using
+* Run `npm start` or `npm run start` to start your local web server at `localhost:9000`
+* Run `npm run build` to build your files from `/src` to `/dist` directory
+
 ## Other repositories
 
 You may want to view my other To-Do list examples to know more about Redux and compare what are differences:
