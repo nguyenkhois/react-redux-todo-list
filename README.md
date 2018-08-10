@@ -1,5 +1,5 @@
 # React-Redux - To-Do list
-You may want to view my other To-Do list examples and compare where are differences:
+You may want to view my other To-Do list examples and compare what are differences:
 
 * [Redux - Simple To-Do list](https://github.com/nguyenkhois/redux-simple-todo-list)
 * [TypeScript - Simple To-Do list](https://github.com/nguyenkhois/typescript-simple-todo-list)
