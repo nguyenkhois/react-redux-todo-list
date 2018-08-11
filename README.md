@@ -1,6 +1,6 @@
 # React-Redux - To-Do list
 ## How you view
-You should view step by step if you want to know about React-Redux:
+You should view step by step when you want to know more about React-Redux in this example:
 * Step 0 (`index.js`): Data structures
 * Step 1 (`reducer.js`): Creating reducer
 * Step 2 (`actions.js`): Creating actions

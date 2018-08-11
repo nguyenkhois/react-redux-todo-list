@@ -45,8 +45,8 @@ class TodoApp extends Component {
         const userInput = e.target.value.trim(); // Get data from text input
         if (e.keyCode === 13 && userInput.length > 0) {
             const newItem = {
-                id: Date.now(), 
-                description: userInput, 
+                id: Date.now(),
+                description: userInput,
                 isDone: false
             };
 
@@ -74,30 +74,41 @@ class TodoApp extends Component {
         this.props.removeCompleted();
     }
 
-    render(){
+    render() {
         // this.props.todos is component state that has mapped on step 4B
         let todoTasks = this.props.todos.filter((item) => !item.isDone);
         let doneTasks = this.props.todos.filter((item) => item.isDone);
 
-        return(
+        return (
             <div>
                 {/* Using for testing purpose - Main state */}
-                { console.log('this.props.todos', this.props.todos) }
+                {console.log('this.props.todos', this.props.todos)}
 
                 <p>To-Do list</p>
-                <input onKeyDown={(e)=>this.handleEnterKey(e)}
-                    type="text" minLength="1" maxLength="50" placeholder="Enter your task"/>
+                <input onKeyDown={(e) => this.handleEnterKey(e)}
+                    type="text" minLength="1" maxLength="50" placeholder="Enter your task" />
 
-                <TodoList items={todoTasks} 
-                    fnCheck={(itemId, e)=>this.handleCheck(itemId, e)} 
-                    fnRemove={(itemId, e)=>this.handleRemove(itemId, e)}/>
+                <TodoList items={todoTasks}
+                    fnCheck={(itemId, e) => this.handleCheck(itemId, e)}
+                    fnRemove={(itemId, e) => this.handleRemove(itemId, e)} />
 
-                <DoneList items={doneTasks} 
-                    fnCheck={(itemId, e)=>this.handleCheck(itemId, e)} 
-                    fnRemove={(itemId, e)=>this.handleRemove(itemId, e)} 
-                    fnClearCompleted={(e)=>this.handleClearCompleted(e)}/>
+                <DoneList items={doneTasks}
+                    fnCheck={(itemId, e) => this.handleCheck(itemId, e)}
+                    fnRemove={(itemId, e) => this.handleRemove(itemId, e)}
+                    fnClearCompleted={(e) => this.handleClearCompleted(e)} />
+
+                <div>
+                    <p> </p>
+                    <a
+                        href="https://github.com/nguyenkhois/react-redux-todo-list"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View on GitHub
+                    </a>
+                </div>
             </div>
-        );        
+        );
     }
 };
 
@@ -106,6 +117,6 @@ TodoApp.propTypes = {
 }
 
 /**
- * STEP 4 - Creating a container component by using connect() function from Redux 
+ * STEP 4 - Creating a container component by using Redux connect() function
  */
 export const TodoX = connect(mapStateToProps, mapDispatchToProps)(TodoApp);
